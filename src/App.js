@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from "react";
-import {movebtnleftpromo, movebtnrightpromo, btndestaques} from './js/actionbtn.js';
-import {dadospromo, dadosdestaques, dadostop} from './js/reqserv.js';
+import {movebtnleftproducts, movebtnrightproducts, btnnews} from './js/actionbtn.js';
+import {dadosproducts, dadosnews, dadostop} from './js/reqserv.js';
 
 function App() {
   // top
@@ -16,20 +16,20 @@ function App() {
   var dataformat = data.toLocaleDateString('pt-br', {timeZone: 'UTC'});
   // top
   
-  // promo
+  // products
   const [pulldados, setpulldados] = useState([]);
-  dadospromo((dados) => {
+  dadosproducts((dados) => {
     if (pulldados.length !== dados.length) {
       setpulldados(dados);
       // console.log(dados);
     }
   });
-  // promo
+  // products
 
   // destaques
   const [pulldestaques, setpulldestaques] = useState([]);
-  // btndestaques();
-  dadosdestaques((dados) => {
+  // btnnews();
+  dadosnews((dados) => {
     if (pulldestaques.length !== dados.length) {
       setpulldestaques(dados);
     }
@@ -43,17 +43,17 @@ function App() {
         <p>Atualizado as {time.hora}h de {dataformat}.</p>
       </div>
       
-      <div className='promo'>
+      <div className='products'>
         <div className='title'><h1>Promoções</h1></div>
         <div className='container'>
-          <button id='btnleft' className='btn' onClick={movebtnleftpromo}><img src='icons/setaesquerda2.png' alt='seta'></img></button>
-          <div className='container-scroll scroll-promo '>
+          <button id='btnleft' className='btn' onClick={movebtnleftproducts}><img src='icons/setaesquerda2.png' alt='seta'></img></button>
+          <div className='container-scroll scroll-products '>
             {Array.from(pulldados).map((val) => {
               return (
                 <figure className='image'>
                   <a rel="noreferrer" target="_blank" href={val.link}>
                     <p>{val.porcentagem}</p>
-                    <img src={val.imgdata} alt="imgpromo"/>
+                    <img src={val.imgdata} alt="imgproducts"/>
                     <figcaption>{val.titulo}</figcaption>
                     <br/>
                     <figcaption>{val.preco}</figcaption>
@@ -62,7 +62,7 @@ function App() {
               );
             })}
           </div>
-          <button id='btnright' className='btn' onClick={movebtnrightpromo}><img src='icons/setadireita.png' alt='seta'></img></button>
+          <button id='btnright' className='btn' onClick={movebtnrightproducts}><img src='icons/setadireita.png' alt='seta'></img></button>
         </div>
       </div>
 
@@ -80,8 +80,8 @@ function App() {
               <figure className='image-new'>
                 <img src={val.imgdata} alt="imgpng"/>
                 <p>{val.texto}</p>
-                <button class="btn-new" onClick={btndestaques}>+</button>
-                <button class="active" onClick={btndestaques}>-</button>
+                <button class="btn-new" onClick={btnnews}>+</button>
+                <button class="active" onClick={btnnews}>-</button>
               </figure>
             );
           })}
