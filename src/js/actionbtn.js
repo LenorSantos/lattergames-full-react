@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export function btndestaques() {
+export function btnnews() {
 
   $('.btn-new').on('click', function () {
     var classatual =  $(this.parentNode);
@@ -23,14 +23,14 @@ export function btndestaques() {
   });
 }
 
-export function movebtnleftpromo() {
+export function movebtnleftproducts() {
   var movescroll = 0;
-  movescroll = $('.scroll-promo').scrollLeft();
-  $('.scroll-promo').animate({scrollLeft: movescroll - 300}, 150);
+  movescroll = $('.scroll-products').scrollLeft();
+  $('.scroll-products').animate({scrollLeft: movescroll - 300}, 150);
 }
 
-export function movebtnrightpromo() {
+export function movebtnrightproducts() {
   var movescroll = 0;
-  movescroll = $('.scroll-promo').scrollLeft();
-  $('.scroll-promo').animate({scrollLeft: movescroll + 300}, 150);
+  movescroll = $('.scroll-products').scrollLeft();
+  $('.scroll-products').animate({scrollLeft: movescroll + 300}, 150);
 }
