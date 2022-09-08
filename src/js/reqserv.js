@@ -1,19 +1,19 @@
 import axios from "axios";
 
 export function dadostop(dados) {
-  axios.get("http://localhost:3001/pulltoppage").then((result) => {
+  axios.get("http://localhost:3001/pulldatetime").then((result) => {
     dados(result.data);
   });
 }
 
-export function dadospromo(dados) {
-  axios.get("http://localhost:3001/pullpromo").then((result) => {
+export function dadosproducts(dados) {
+  axios.get("http://localhost:3001/reqproducts").then((result) => {
     dados(result.data);
   });
 }
 
-export function dadosdestaques(dados) {
-  axios.get("http://localhost:3001/pulldestaques").then((result) => {
+export function dadosnews(dados) {
+  axios.get("http://localhost:3001/pullnews").then((result) => {
     dados(result.data);
   });
 }
