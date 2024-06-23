@@ -9,7 +9,7 @@ export default function News() {
       setNews(result.data);
     }).catch(err => {
       // console.log(err);
-    });
+    }).finally(() => btnnews());
   }, []);
 
   return (
@@ -23,8 +23,10 @@ export default function News() {
             <figure className='image-new'>
               <img src={val.imgdata} alt="imgpng" />
               <p>{val.text}</p>
-              <button class="btn-new" onClick={btnnews}>+</button>
-              <button class="active" onClick={btnnews}>-</button>
+              {/* <button class="btn-new" onClick={btnnews}>+</button> */}
+              {/* <button class="active" onClick={btnnews}>-</button> */}
+              <button class="btn-new">+</button>
+              <button class="active">-</button>
             </figure>
           );
         })}

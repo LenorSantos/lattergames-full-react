@@ -3,6 +3,7 @@ import $ from 'jquery';
 export function btnnews() {
 
   $('.btn-new').on('click', function () {
+    // console.log('teste');
     var classatual =  $(this.parentNode);
     classatual.removeClass('image-new').addClass('screen');
     setTimeout(() => {
