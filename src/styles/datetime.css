@@ -6,13 +6,34 @@
   align-items: center;
 }
 
-.top img {
+/* .top img {
   width: 430px;
   height: 90px;
   margin-bottom: 10px;
+} */
+
+#logo {
+  /* width: 430px; */
+  /* height: 90px; */
+  /* margin-bottom: 10px; */
+
+  font-family: "Jersey 10 Charted", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7em;
+  margin: 12px 0;
 }
 
-.top p {
+/* .top p {
   margin: 0px;
   font-size: 1.4em;
+
+  color: #817979;
+} */
+
+#datetime {
+  margin: 0px;
+  font-size: 1.4em;
+  /* color: #817979; */
+  color: white;
 }

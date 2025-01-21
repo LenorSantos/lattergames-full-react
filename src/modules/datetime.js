@@ -15,8 +15,9 @@ export default function Datetime() {
 
   return (
     <div className='top'>
-      <img src='icons/logotipolow.png' alt='logo'></img>
-      <p>Atualizado as {time.time}h de {dataformat}.</p>
+      {/* <img src='icons/logotipolow.png' alt='logo'></img> */}
+      <p id="logo">Latter Games</p>
+      <p id="datetime">Atualizado as {time.time}h de {dataformat}.</p>
     </div>
   );
 }

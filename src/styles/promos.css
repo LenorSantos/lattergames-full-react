@@ -88,8 +88,10 @@ h1 {
 
 .btn {
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
   display: flex;
   background-color: rgba(92, 67, 106, 0.7);
   border: none;
@@ -100,7 +102,7 @@ h1 {
 }
 
 .btn img {
-  width: 40px;
+  width: 2rem;
   height: 50px;
 }
 

@@ -3,7 +3,7 @@ import { modules } from "./modules/index.js";
 
 function App() {
   return (
-    <div class="App"> 
+    <div className="App"> 
       {/* datetime */}
       <modules.Datetime />
       
